@@ -1,0 +1,81 @@
+#INSERT TABLE BRANCHES-
+Insert into branches(branch_id, manager_id, branch_address, contact_no) values
+     (1, 101, 'Connaught Place, New Delhi, Delhi, India', '9876543210'),
+     (2, 102, 'Bandra Kurla Complex, Mumbai, Maharashtra, India', '9823456781'),
+     (3, 103, 'MG Road, Bengaluru, Karnataka, India', '9834567120'),
+     (4, 104, 'T. Nagar, Chennai, Tamil Nadu, India', '9845671234'),
+     (5, 105, 'Banjara Hills, Hyderabad, Telangana, India', '9856782345'),
+     (6, 106, 'Park Street, Kolkata, West Bengal, India', '9867893456'),
+     (7, 107, 'Ashram Road, Ahmedabad, Gujarat, India', '9878904567'),
+     (8, 108, 'Hazratganj, Lucknow, Uttar Pradesh, India', '9889015678'),
+     (9, 109, 'MI Road, Jaipur, Rajasthan, India', '9890126789'),
+     (10, 110, 'FC Road, Pune, Maharashtra, India', '9901237890');
+
+
+#INSERT TABLE EMPLOYEES-
+Insert into employees(emp_id, emp_name, position, branch_id) values
+     (201, 'Amit Sharma', 'Branch Manager', 1),
+     (202, 'Priya Verma', 'Assistant Manager', 2),
+     (203, 'Rahul Nair', 'Senior Branch Manager', 3),
+     (204, 'Sneha Reddy', 'Senior Assistant Manager', 4),
+     (205, 'Vikram Singh', 'Accountant', 5),
+     (206, 'Neha Gupta', 'Senior Accountant', 6),
+     (207, 'Arjun Patel', 'Accountant', 7),
+     (208, 'Kavya Iyer', 'Senior Assistant Manager', 8),
+     (209, 'Rohit Mehta', 'Branch Manager', 9),
+     (210, 'Pooja Das', 'Senior Accountant', 10);
+
+
+#ALTER TABLE EMPLOYEES-
+alter table employees modify position varchar(70);
+
+
+#INSERT TABLE MEMBERS-
+Insert into members(member_name, member_address, reg_date)values
+     ('Ravi Kumar', 'Anna Nagar,Chennai,Tamil Nadu', '2025-01-10'),
+     ('Anjali Mehta', 'Andheri West,Mumbai,Maharashtra', '2025-01-15'),
+     ('Suresh Reddy', 'Banjara Hills,Hyderabad,Telangana', '2025-01-20'),
+     ('Pooja Sharma', 'Karol Bagh,New Delhi,Delhi', '2025-01-25'),
+     ('Manish Patel', 'Navrangpura,Ahmedabad,Gujarat', '2025-02-01'),
+     ('Deepika Nair', 'Kakkanad,Kochi,Kerala', '2025-02-05'),
+     ('Arvind Singh', 'Civil Lines,Jaipur,Rajasthan', '2025-02-08'),
+     ('Snehal Deshmukh', 'Shivaji Nagar,Pune,Maharashtra', '2025-02-12'),
+     ('Farhan Ali', 'Alambagh,Lucknow,Uttar Pradesh', '2025-02-15'),
+     ('Lakshmi Iyer', 'Whitefield,Bengaluru,Karnataka', '2025-02-18');
+
+
+#INSERT TABLE BOOKS-
+Insert into books(book_no, book_name, category, rental_price, status, author)values
+     (1, 'Wings of Fire', 'Autobiography', 30.00, 'Available', 'A.P.J. Abdul Kalam'),
+     (2, 'The Guide', 'Fiction', 25.00, 'Available', 'R.K. Narayan'),
+     (3, 'Train to Pakistan', 'Historical Fiction', 28.00, 'Rented', 'Khushwant Singh'),
+     (4, 'The God of Small Things', 'Literary Fiction', 35.00, 'Available', 'Arundhati Roy'),
+     (5, 'Five Point Someone', 'Fiction', 20.00, 'Available', 'Chetan Bhagat'),
+     (6, 'Midnight’s Children', 'Magical Realism', 32.00, 'Rented', 'Salman Rushdie'),
+     (7, 'The White Tiger', 'Fiction', 30.00, 'Available', 'Aravind Adiga'),
+     (8, 'Malgudi Days', 'Short Stories', 22.00, 'Available', 'R.K. Narayan'),
+     (9, 'Ignited Minds', 'Inspirational', 27.00, 'Rented', 'A.P.J. Abdul Kalam'),
+     (10, 'Discovery of India', 'History', 40.00, 'Available', 'Jawaharlal Nehru');
+
+
+#INSERT TABLE ISSUED STATUS-
+INSERT INTO issued_status
+     (issued_member_id, issued_book_name, issued_book_no, issued_emp_id)
+     VALUES
+     (17, 'Train to Pakistan', 3, 201),
+     (18, 'Midnight''s Children', 6, 202),
+     (19, 'Ignited Minds', 9, 203),
+     (20, 'The Guide', 2, 201),
+     (21, 'The White Tiger', 7, 204);
+
+
+#INSERT TABLE RETURN STATUS-
+Insert into return_status(issued_id, return_book_name, return_date, return_book_no)
+     values
+     (16, 'Train to Pakistan', '2026-02-20', 3),
+     (18, 'Midnight''s Children', '2026-02-21', 6);
+
+
+
+
+
