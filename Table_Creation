@@ -1,0 +1,59 @@
+#CREATE TABLE BRANCHES-
+Create table branches(
+     branch_id varchar(15) primary key,
+     manager_id varchar(20),
+     branch_address varchar(150),
+     contact_no varchar(15));
+
+
+#CREATE TABLE EMPLOYEES-
+Create table employees(
+    -> emp_id varchar(10) primary key,
+    -> emp_name varchar(45),
+    -> position varchar(13),
+    -> branch_id varchar(15),
+    -> foreign key (branch_id) references branches(branch_id));
+
+
+#CREATE TABLE MEMBERS-
+Create table members(
+    -> member_id int auto_increment primary key,
+    -> member_name varchar(35),
+    -> member_address varchar(40),
+    -> reg_date date);
+
+
+#CREATE TABLE BOOKS-
+Create table books(
+    -> book_no int auto_increment primary key,
+    -> book_name varchar(50),
+    -> category varchar(60),
+    -> rental_price decimal(10,2),
+    -> status varchar(25),
+    -> author varchar(30));
+
+
+#CREATE TABLE ISSUED STATUS-
+Create table issued_status(
+    -> issued_id int auto_increment primary key,
+    -> issued_member_id int(30),
+    -> issued_book_name varchar(50),
+    -> issued_book_no int(50),
+    -> issued_emp_id varchar(10),
+    -> foreign key (issued_member_id) references members(member_id),
+    -> foreign key (issued_emp_id) references employees(emp_id),
+    -> foreign key (issued_book_no) references books(book_no));
+
+
+#CREATE TABLE RETURN STATUS-
+Create table return_status(
+    -> return_id int auto_increment primary key,
+    -> issued_id int(60),
+    -> return_book_name varchar(50),
+    -> return_date date,
+    -> return_book_no int(50),
+    -> foreign key (return_book_no) references books(book_no));
+
+
+
+
