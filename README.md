@@ -10,9 +10,9 @@ CRUD Operations: Perform Create, Insert, Update, and Delete operations on the da
 Advanced SQL Queries: Develop complex queries to analyze and retrieve specific data.
 
 **#ER DIAGRAM:**
-EMPLOYEES
-BRANCHES
-BOOKS
-MEMBERS
-ISSUED STATUS
-RETURN STATUS
+EMPLOYEES,
+BRANCHES,
+BOOKS,
+MEMBERS,
+ISSUED STATUS,
+RETURN STATUS,
